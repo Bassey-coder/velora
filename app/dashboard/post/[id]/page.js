@@ -18,7 +18,7 @@ async function fetchPost (postId) {
 
 }   
 export default async function PostPage({params}) {
-    const {id} = params;
+    const {id} = await params;
     const post = await fetchPost(id);
     return (
         <main className="min-h-screen bg-gray-100 p-6">
